@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -12,5 +13,9 @@ module.exports = {
     contentBase: './dist'
   },
   module: {},
-  plugins: []
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Sample'
+    })
+  ]
 };
